@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="SchedulingModule">
+<html>
 <head>
   <title>Agendamento</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -8,7 +8,7 @@
 </head>
 <body>
 <%= render "shared/header" %>
-	<div class="container" />
+	<div class="container" ng-app="SchedulingModule" />
 		<div class="content">
  	   		<p class="notice"><%= notice %></p>
       		<p class="alert"><%= alert %></p>
