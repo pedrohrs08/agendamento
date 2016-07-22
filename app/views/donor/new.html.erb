@@ -9,11 +9,29 @@
           <div class="col-xs-6">
             <input type="text" ng-model="newDonor.cpf" class="form-control" placeholder="Last Name" />
           </div>
+          <div class="col-xs-6">
+            <input type="date" ng-model="newDonor.birth_date" class="form-control" placeholder="Last Name" />
+          </div>
+          <div class="col-xs-6">
+            <select ng-model="newDonor.sex" class="form-control" placeholder="Last Name" >
+            	<option value="Masculino">Masculino</option>
+            	<option value="Feminino">Feminino</option>
+            </select>
+          </div>
+          <div class="col-xs-6">
+            <input type="text" ng-model="newDonor.contact" class="form-control" placeholder="Last Name" />
+          </div>
         </div>
         <div class="row">
           <div class="col-xs-12">
             <br />
             <input type="text" ng-model="newDonor.email" class="form-control" placeholder="Reason for Visit" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <br />
+            <input type="text" ng-model="newDonor.health_info" class="form-control" placeholder="Reason for Visit" />
           </div>
         </div>
         <div class="row">
@@ -24,3 +42,5 @@
         </div>
       </form>
     </div>
+  </div>
+

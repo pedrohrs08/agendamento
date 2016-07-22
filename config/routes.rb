@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+
   get 'donor/new'
+  post 'donor' => "donor#create"
+
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
