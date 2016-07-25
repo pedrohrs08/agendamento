@@ -1,10 +1,14 @@
 class DonorController < ApplicationController
   def new
-  	@donor = Donor.new
+  	
   end
 
   def create
-  	DonorsServiceClient.save_donor donor_params
+  	response = DonorsServiceClient.save_donor donor_params
+    p response.to_json
+    respond_to do |format|
+      format.json { render :json => response.body }
+    end
   end
 
   private 

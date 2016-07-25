@@ -1,45 +1,41 @@
 <div ng-controller="DonorsController">
     <div class="well">
-      <h3>Add a new Visitor</h3>
+      <h3>Cadastre seus dados de Doador:</h3>
       <form ng-submit="addDonor()">
-        <div class="row">
-          <div class="col-xs-6">
-            <input type="text" ng-model="newDonor.name" class="form-control" placeholder="First Name" />
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" ng-model="newDonor.name" class="form-control" placeholder="Nome" />
           </div>
-          <div class="col-xs-6">
-            <input type="text" ng-model="newDonor.cpf" class="form-control" placeholder="Last Name" />
+          <div class="form-group">
+            <label for="cpf">CPF:</label>
+            <input type="text" ng-model="newDonor.cpf" class="form-control" placeholder="CPF" />
           </div>
-          <div class="col-xs-6">
-            <input type="date" ng-model="newDonor.birth_date" class="form-control" placeholder="Last Name" />
+          <div class="form-group">
+            <label for="birth-date">Data de Nascimento:</label>
+            <input type="date" ng-model="newDonor.birth_date" id="birth-date" class="form-control" />
           </div>
-          <div class="col-xs-6">
-            <select ng-model="newDonor.sex" class="form-control" placeholder="Last Name" >
+          <div class="form-group">
+            <label for="sex">Sexo:</label>
+            <select ng-model="newDonor.sex" class="form-control" id="Sexo">
             	<option value="Masculino">Masculino</option>
             	<option value="Feminino">Feminino</option>
             </select>
           </div>
-          <div class="col-xs-6">
-            <input type="text" ng-model="newDonor.contact" class="form-control" placeholder="Last Name" />
+          <div class="form-group">
+            <label for="contact">Contato:</label>
+            <input type="text" id="contact" ng-model="newDonor.contact" class="form-control" placeholder="Contato" />
+          </div>  
+          <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" ng-model="newDonor.email" class="form-control" placeholder="Email" />
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <br />
-            <input type="text" ng-model="newDonor.email" class="form-control" placeholder="Reason for Visit" />
+          <div class="form-group">
+            <label for='health-info'>Informações de Saúde:</label>
+            <textarea ng-model="newDonor.health_info" class="form-control" ></textarea>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <br />
-            <input type="text" ng-model="newDonor.health_info" class="form-control" placeholder="Reason for Visit" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 text-center">
-            <br />
+          <div class="form-group">
             <input type="Submit" value="Add Visitor" class="btn btn-primary" />
           </div>
-        </div>
       </form>
     </div>
   </div>
