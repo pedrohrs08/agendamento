@@ -5,9 +5,13 @@ class DonorController < ApplicationController
 
   def create
   	response = DonorsServiceClient.save_donor donor_params
-    p response.to_json
+    saved_donor = JSON.parse(response.body)
+    
+    current_user.donor_id = saved_donor['_id']['$oid']
+    current_user.save
+
     respond_to do |format|
-      format.json { render :json => response.body }
+      format.json { render :json => JSON.parse(response.body) }
     end
   end
 

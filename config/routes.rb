@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get 'donor/new'
-  post 'donor' => "donor#create"
+  post 'donor' => "donor#create", :defaults => { :format => 'json' }
 
 
   devise_for :users
