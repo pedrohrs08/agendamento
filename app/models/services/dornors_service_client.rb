@@ -1,5 +1,5 @@
 class DonorsServiceClient
-	URL = ENV['donrs_url']
+	URL = ENV['donors_url']
 
 	def self.save_donor(donor)
 	 	RestClient.post URL, :donor => donor	

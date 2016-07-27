@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
   	if current_user.donor_id.nil? 
-  		'/donor/new'
+  		'/donors/new'
   	else
   		root_path
   	end
