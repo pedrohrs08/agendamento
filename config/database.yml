@@ -15,7 +15,7 @@ default: &default
   pool: 5
   username: root
   password:
-  socket: /tmp/mysql.sock
+  #socket: /tmp/mysql.sock
 
 development:
   <<: *default
@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: agendamento_production
-  username: agendamento
+  username: root
   password: <%= ENV['AGENDAMENTO_DATABASE_PASSWORD'] %>
+  host: 52.42.223.8
