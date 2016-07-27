@@ -25,11 +25,12 @@ Rails.application.configure do
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = Uglifier.new(mangle: false)
-  # config.assets.css_compressor = :sass
-
-  # Do not fallback to assets pipeline if a precompiled asset is missed.
+  config.serve_static_assets = true 
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' 
   config.assets.compile = true
+  config.assets.precompile =  ['*.js', '*.css']
+  config.assets.js_compressor = Uglifier.new(:mangle => false)
+  # config.assets.css_compressor = :sass
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.

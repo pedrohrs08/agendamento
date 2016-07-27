@@ -8,7 +8,8 @@ app.factory("Donor", ["$resource",function($resource){
 }]);
 
 app.controller("DonorsController", ["$scope","Donor",function($scope, Donor) {
+	alert("HELLO1!");
 	$scope.addDonor = function(){
-		donor = Donor.save($scope.newDonor)
+		donor = Donor.save($scope.newDonor);
 	}
 }]);
