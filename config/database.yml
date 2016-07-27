@@ -51,5 +51,5 @@ production:
   <<: *default
   database: agendamento_production
   username: root
-  password: <%= ENV['AGENDAMENTO_DATABASE_PASSWORD'] %>
-  host: 52.42.223.8
+  password: <%= ENV['AGENDAMENTO_DATABASE_PASSWORD'] || 'abcd' %>
+  host: <%= ENV['DB_HOST'] || 'localhost' %>
