@@ -1,6 +1,6 @@
 <% if current_user.donor_id.nil? then %>
 	<p> Por favor complete seu cadastro </p>
-	<%= link_to "Clique aqui", "/donor/new" %>
+	<%= link_to "Clique aqui", "/donors/new" %>
 <% else %>
     <p> Seu cadastro está completo: </p>
     <%= @donor %>
