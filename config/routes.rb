@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'donors/new'
+  get 'donors/new' => "donor#new"
   post 'donors' => "donor#create", :defaults => { :format => 'json' }
 
 
