@@ -14,8 +14,8 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: abcd
-  host: <%= ENV['AGENDAMENTO_DATABASE_PASSWORD'] || 'abcd' %>
+  password: <%= ENV['DB_PASSWORD'] || 'abcd' %>
+  host: <%= ENV['DB_HOST'] || 'localhost' %>
   #socket: /tmp/mysql.sock
 
 development:
