@@ -3,5 +3,63 @@
 	<%= link_to "Clique aqui", "/donors/new" %>
 <% else %>
     <p> Seu cadastro está completo: </p>
-    <%= @donor %>
+       <div class="jumbotron">
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <label><%= @donor["name"] %></label>
+          </div>
+          <div class="form-group">
+            <label for="cpf">CPF:</label>
+            <label><%= @donor["cpf"] %></label>
+          </div>
+          <div class="form-group">
+            <label for="birth-date">Data de Nascimento:</label>
+            <label><%= @donor["birth_date"] %></label>
+          </div>
+          <div class="form-group">
+            <label for="sex">Sexo:</label>
+            <label><%= @donor["sex"] %></label>
+          </div>
+          <div class="form-group">
+            <label for="contact">Contato:</label>
+            <label><%= @donor["contact"] %></label>
+          </div>  
+          <div class="form-group">
+            <label for="email">E-mail:</label>
+            <label><%= @donor["email"] %></label>
+          </div>
+          <div class="form-group">
+            <label for="blood-type">Blood Type:</label>
+            <label><%= @donor["blood_type"] %></label>
+          </div>
+           <div class="form-group">
+            <label for="street">Endereço:</label>
+            <label><%= @donor["address"]["street"] %></label>
+          </div>
+           <div class="form-group">
+            <label for="number">Número:</label>
+            <label><%= @donor["address"]["number"] %></label>
+          </div>
+          <div class="form-group">
+            <label for="city">Cidade:</label>
+            <label><%= @donor["address"]["city"] %></label>
+          </div>
+          <div class="form-group">
+            <label for="state">Estado:</label>
+            <label><%= @donor["address"]["state"] %></label>
+          </div>
+          <div class="form-group">
+            <label for="pais">País:</label>
+            <label><%= @donor["address"]["country"] %></label>
+          </div>
+          <div class="form-group">
+            <label for='health-info'>Informações de Saúde:</label>
+            <label><%= @donor["health_info"] %></label>
+          </div>
+          <div >
+          	<a type="button" class="btn btn-default">Agendar uma doação</a>
+          </div>
+      </div>
+    </div>
+  </div>
 <% end %>

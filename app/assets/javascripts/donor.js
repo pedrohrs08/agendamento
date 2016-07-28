@@ -7,9 +7,10 @@ app.factory("Donor", ["$resource",function($resource){
 	});
 }]);
 
-app.controller("DonorsController", ["$scope","Donor",function($scope, Donor) {
+app.controller("DonorsController", ["$window","$scope","Donor",function($window,$scope, Donor) {
 	alert("HELLO1!");
 	$scope.addDonor = function(){
 		donor = Donor.save($scope.newDonor);
+		$window.location.href = '/';
 	}
 }]);
