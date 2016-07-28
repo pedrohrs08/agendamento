@@ -28,7 +28,7 @@ Rails.application.configure do
   config.serve_static_assets = true 
   config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' 
   config.assets.compile = true
-  config.assets.precompile =  ['*.js', '*.css']
+  config.assets.precompile =  ['*.js', '*.css', '*.css.erb']
   config.assets.js_compressor = Uglifier.new(:mangle => false)
   # config.assets.css_compressor = :sass
 
